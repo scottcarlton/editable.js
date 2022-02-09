@@ -135,14 +135,14 @@ export default function createDefaultBehavior (editable) {
 
     switch (element, direction, cursor) {
       switch (direction) {
-        case 'before':
+        case 'up':
           const previous = block.previous(element)
           if (previous) {
             cursor.moveAtTextEnd(previous)
             cursor.setVisibleSelection()
           }
           break
-        case 'after':
+        case 'down':
           const next = block.next(element)
           if (next) {
             cursor.moveAtBeginning(next)
